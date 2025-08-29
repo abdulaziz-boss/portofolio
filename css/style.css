@@ -1,0 +1,224 @@
+/* Reset sederhana */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar custom */
+
+.navbar-brand {
+  letter-spacing: 1px;
+}
+
+/* Card Hover */
+.card:hover {
+  transform: translateY(-8px);
+  transition: 0.3s ease-in-out;
+}
+
+/* Button custom */
+.btn {
+  border-radius: 25px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Navbar custom */
+.custom-navbar {
+  background: linear-gradient(
+    135deg, 
+    #0077b6,  /* biru kiri */
+    #ffe6c9,  /* krem tengah */
+    #0077b6   /* biru kanan */
+  );
+  transition: background 0.3s ease;
+}
+
+
+/* Brand (MyPortfolio) */
+.custom-navbar .navbar-brand {
+  color: #ffd700 !important; /* kuning emas */
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: #ffea70 !important; /* hover lebih terang */
+}
+
+/* Link navbar */
+.custom-navbar .nav-link {
+  color: #ffd700 !important; /* kuning emas */
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffd700; /* underline emas */
+  transition: width 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ffea70 !important; /* hover lebih terang */
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Navbar saat scroll */
+.custom-navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Animasi Fade In */
+.custom-navbar {
+  opacity: 0;
+  transform: translateY(-20px); /* muncul dari atas sedikit */
+  animation: fadeInNav 1s ease forwards;
+}
+
+@keyframes fadeInNav {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.hero {
+  background: linear-gradient(
+                135deg, 
+                rgba(0,119,182,0.8),   /* biru laut transparan */
+                rgba(255,230,201,0.85),/* krem */
+                rgba(255,255,255,0.9)  /* putih */
+              ),
+              url("https://images.unsplash.com/photo-1491378630646-3440efa57c3b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0") 
+              no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* Teks */
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #f5e6c8; /* kuning krem biar serasi dengan navbar */
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #fdfdfd; /* putih bersih */
+}
+
+/* Tombol */
+.hero a {
+  background: linear-gradient(135deg, #0077b6, #ffe6c9);
+  border: none;
+  color: #222;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero a.btn {
+  background: linear-gradient(135deg, #0077b6, #ffe6c9);
+  color: #222;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.hero a.btn:hover {
+  background: linear-gradient(135deg, #005f87, #ffd79f);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+/* Animasi Fade-in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero .profile-img { animation: fadeInUp 1s ease-in-out 0.2s both; }
+.hero h1           { animation: fadeInUp 1s ease-in-out 0.6s both; }
+.hero p            { animation: fadeInUp 1s ease-in-out 1s both; }
+.hero a            { animation: fadeInUp 1s ease-in-out 1.4s both; }
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* overlay gelap */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4); /* hitam transparan */
+  z-index: 1;
+}
+
+
+/* konten tetap di atas overlay */
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.typing-name {
+  color: #ffe680;   /* kuning krem biar nyambung sama navbar */
+  font-weight: 600;
+}
+
+/* project */
+.btn-preview {
+    font-size: 0.8rem;          /* kecilin ukuran teks */
+    padding: 0.25rem 0.6rem;    /* kecilin padding */
+    border-radius: 6px;         /* biar agak rounded */
+  }

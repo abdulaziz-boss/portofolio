@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Tambahkan Bootstrap Icons (kalau belum ada) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="#">
+        <!-- Logo tetap -->
+        <i class="bi bi-code-slash me-2"></i>
+        <!-- Teks diisi animasi -->
+        <span class="typing-text"></span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex align-items-center">
+      <div class="container text-center">
+        <img src="img/photo-profil.jpeg" alt="Profile" 
+            class="profile-img mb-3">
+        <h1 class="fw-bold display-5">
+          Hi, I'm <span class="typing-name"></span>
+        </h1>
+
+        <p class="lead text-light-50">Web Developer | UI/UX Enthusiast | Tech Explorer</p>
+        <a href="#projects" class="btn btn-primary px-4 mt-3 shadow">View My Work</a>
+      </div>                                                                
+    </section>
+
+
+  <!-- About -->
+  <section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="card shadow-lg border-0 rounded-4 p-4">
+      <div class="row align-items-center">
+       
+        <div class="col-md-5 text-center mb-4">
+          <img src="img/photo-profil.jpeg" 
+               class="rounded shadow-sm img-fluid" 
+               alt="About"
+               style="max-width: 200px; object-fit: cover;">
+        </div>
+            
+        <div class="col-md-7">
+          <h2 class="fw-bold mb-3">About Me</h2>
+          <p>
+            Saya seorang web developer yang suka membuat website simple, modern, dan user-friendly. 
+            Berfokus pada pengembangan frontend dengan pengalaman di HTML, CSS, Bootstrap, dan JavaScript.
+          </p>
+          <p>
+            Tujuan saya adalah membuat tampilan web yang tidak hanya menarik tetapi juga memberikan pengalaman terbaik bagi user.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">My Projects</h2>
+    <div class="row g-4">
+      
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 d-flex flex-column">
+          <img src="./img/photo1.png" class="card-img-top" alt="Project 1">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Website Company</h5>
+            <p class="card-text">Website modern untuk perusahaan dengan tampilan clean dan responsive.</p>
+            <a href="https://projectsem1.github.io/Semester-1/tailwind/index.html" class="btn btn-outline-primary btn-preview mt-auto">Preview</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 d-flex flex-column">
+          <img src="./img/photo3.png" class="card-img-top" alt="Project 2">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Bootstrap</h5>
+            <p class="card-text">Menampilkan desain responsif dan komponen modern untuk latihan layout dan card interaktif.</p>
+            <a href="https://projectsem1.github.io/Semester-1/bootstrap/mini_card/index.html" class="btn btn-outline-primary btn-preview mt-auto">Preview</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 d-flex flex-column">
+          <img src="./img/photo2.png" class="card-img-top" alt="Project 3">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Portfolio App</h5>
+            <p class="card-text">Aplikasi portfolio personal dengan desain minimalis dan interaktif.</p>
+            <a href="https://projectsem1.github.io/Semester-1/html_css/index.html" class="btn btn-outline-primary btn-preview mt-auto">Preview</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">Contact Me</h2>
+    <p class="mb-4">Punya proyek menarik? Yuk, diskusi lebih lanjut!</p>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <!-- GitHub -->
+      <a href="https://github.com/abdulaziz-boss" target="_blank" class="btn btn-dark">
+        <i class="fab fa-github me-2"></i> GitHub
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/abdul-aziz-710476371/" target="_blank" class="btn btn-primary">
+        <i class="fab fa-linkedin me-2"></i> LinkedIn
+      </a>
+
+      <!-- Email -->
+       <a href="mailto:jiissabdul@gmail.com" class="btn btn-danger">
+        <i class="fas fa-envelope me-2"></i> Email
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/jiiss2__/?next=%2F" target="_blank" class="btn btn-warning text-white">
+        <i class="fab fa-instagram me-2"></i> Instagram
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/6285716163900" target="_blank" class="btn btn-success">
+        <i class="fab fa-whatsapp me-2"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-3 text-center">
+    <small>&copy; 2025 MyPortfolio | All Rights Reserved</small>
+  </footer>
+
+  <script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".custom-navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+  </script>
+
+  <script src="./js/main.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

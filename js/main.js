@@ -58,5 +58,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   typeEffect();
+
+  // Highlight active menu on scroll
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      // Kurangi sedikit offset agar responsif saat scroll
+      if (pageYOffset >= sectionTop - 250) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+
 });
 
